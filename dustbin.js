@@ -15,15 +15,31 @@ class dustbin
 
       this.rightLine = Bodies.rectangle(x+width/2 + 5,this.y, 10, this.h,{isStatic:true})
       World.add(world,this.rightLine)
+     
+      // 2:create a sprite
 
-      this.image = loadImage("dustbin.png")
-  }
+      // 1:load and image
+      // 3:add the image to sprite
+
+         var garbage
+         var garbageImage
+
+         garbageImage = loadImage("dustbingreen.png")
+
+         garbage = createSprite(this.x,this.y,this.w,this.h)
+
+         garbage.addImage("dustbin",garbageImage)
+
+         garbage.scale = 0.40 
+
+        
+     }
      display()
      {
         //rect(this.x,this.y,this.w,this.h)
-        rect(this.rightLine.position.x,this.rightLine.position.y,10,this.h)
-        rect(this.leftLine.position.x,this.leftLine.position.y,10,this.h)
-        rect(this.bottomLine.position.x,this.bottomLine.position.y,this.w,10)
+      //   rect(this.rightLine.position.x,this.rightLine.position.y,10,this.h)
+      //   rect(this.leftLine.position.x,this.leftLine.position.y,10,this.h)
+      //   rect(this.bottomLine.position.x,this.bottomLine.position.y,this.w,10)
 
      }
 }

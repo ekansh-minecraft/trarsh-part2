@@ -65,6 +65,7 @@ function draw() {
 	  text("press r to reset",100,302)
 	  if(keyDown("r"))
 	  {
+		  shootState = READY
 	  }
   }
 
